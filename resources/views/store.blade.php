@@ -49,8 +49,8 @@
     <div class="container">
 
       @foreach ($products as $product)
-      <div class="card text-center my-3 mx-3 product-card" style="width:  17.6rem;">
-        <img src="\{{$product->image}}" class="card-img-top" style="height: 200px" alt="...">
+      <div class="card text-center my-3 mx-3 product-card" style="width: 15.3rem; height:500px">
+        <img src="\{{$product->image}}" class="card-img-top" style="width: auto; height:170px" alt="...">
       
   
         <div class="card-body">
