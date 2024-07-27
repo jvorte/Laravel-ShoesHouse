@@ -38,6 +38,10 @@ font-size: 25px;
  background-color: #292929;   
 }
 
+#text-hide{
+ height:  70px;
+}
+
 /* - footer--------------------------------------------- --*/
 
 .main-footer{
@@ -163,11 +167,11 @@ font-size: 25px;
     float:right;
     padding-right: 30px;
 }
-.dropdown .dropdown-menu{
+#dropdown #dropdown-menu{
     padding:20px;
     top:30px !important;
     width:350px !important;
-    left:0px !important;
+    left:-200px !important;
     box-shadow:0px 5px 30px black;
 }
 .dropdown-menu:before{
@@ -179,7 +183,7 @@ font-size: 25px;
     border-bottom-color:#fff;
 }
 .fs-8{
-    font-size: 13px;
+    font-size: 15px;
 }
 
 /* -------------end---cart------------------------------------------------- */

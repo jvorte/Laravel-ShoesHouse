@@ -47,12 +47,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav  ms-auto">
-                        <li class="nav-item ">
-                            @if (!empty(Auth::user()) && Auth::user()->usertype == 'admin' )
-                                 <a class="nav-link  btn btn-secondary text-white" aria-current="page" href="{{ url('/admin/dashboard') }}">Admin</a>
-                                               
-                             @endif                   
-                             </li>
+                   
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -82,6 +77,9 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                    @if (!empty(Auth::user()) && Auth::user()->usertype == 'admin' )
+                                    <a class="dropdown-item" href="{{ url('/admin/dashboard') }}">Admin</a>                                                  
+                                    @endif  
                                 </div>
                             </li>
                         @endguest

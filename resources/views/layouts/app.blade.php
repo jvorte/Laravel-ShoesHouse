@@ -42,8 +42,8 @@
                 <a class="navbar-brand text-white" href="{{ url('/home') }}">
                     {{ config('app.name', 'ShoesHouse') }}
                 </a>
-                <button class="navbar-toggler" style="color: white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon" ></span>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <i class="bi bi-list"></i>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,7 +51,7 @@
                     <ul class="navbar-nav me-auto">
 
                     <li class="nav-item ">
-                    <a class="nav-link text-white active" aria-current="page" href="#{{ url('/home') }}">Home</a>
+                    <a class="nav-link text-white active" aria-current="page" href="{{ url('/home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ url('/store') }}">Store</a>
@@ -67,12 +67,7 @@
                 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav  ms-auto">
-                        <li class="nav-item ">
-                            @if (!empty(Auth::user()) && Auth::user()->usertype == 'admin' )
-                                 <a class="nav-link  btn btn-secondary text-white" aria-current="page" href="{{ url('/admin/dashboard') }}">Admin</a>
-                                               
-                             @endif                   
-                             </li>
+                   
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -103,16 +98,20 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                    @if (!empty(Auth::user()) && Auth::user()->usertype == 'admin' )
+                                    <a class="dropdown-item" href="{{ url('/admin/dashboard') }}">Admin</a>                                                  
+                                    @endif    
+                                   
                                 </div>
                             </li>
                         @endguest
                     </ul>
                           {{-- ----------------basket---------------------------- --}}
-                          <div class="dropdown">
+                          <div class="dropdown" id="dropdown">
                             <button type="button" class="btn btn-danger  dropdown-toggle mt-1" data-bs-toggle="dropdown">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
                             </button>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu" id="dropdown-menu">
                                 <div class="row total-header-section">
                                     <div class="col-lg-6 col-sm-6 col-6">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
@@ -122,7 +121,7 @@
                                         @php $total += $details['price'] * $details['quantity'] @endphp
                                     @endforeach
                                     <div class="col-md-6 text-end">
-                                        <p><strong>Total: <span class="text-info">${{ $total }}</span></strong></p>
+                                        <p><strong>Total: <span class="text-info">€{{ $total }}</span></strong></p>
                                     </div>
                                 </div>
                                 @if(session('cart'))
@@ -133,8 +132,8 @@
                                         </div>
                                         <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
                                             <p class="mb-0">{{ $details['name'] }}</p>
-                                            <span class="fs-8 text-info"> Price: ${{ $details['price'] }}</span> <br/>
-                                            <span class="fs-8 fw-lighter"> Quantity: {{ $details['quantity'] }}</span>
+                                            <span class="fs-8 text-info"> Price: €{{ $details['price'] }}</span> <br/>
+                                            <span class="fs-8"> Quantity: {{ $details['quantity'] }}</span>
                                         </div>
                                     </div>
                                 @endforeach

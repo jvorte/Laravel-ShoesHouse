@@ -5,7 +5,7 @@
 <div class="container">
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Store</li>
     </ol>
   </nav>
@@ -55,7 +55,7 @@
   
         <div class="card-body">
           <h5 class="card-title">Brand: {{$product->brandname}}</h5>
-          <p class="card-text">{{$product->description}}</p>
+          <p class="card-text" id="text-hide" >{{$product->description}}</p>
         </div>
         <ul class="list-group list-group-flush">
        
