@@ -122,4 +122,12 @@ class ProductController extends Controller
         }
     }
 
+    public function search(Request $request)
+{
+    $search = $request->input('search');
+    $results = Product::where('brandname', 'like', "%$search%")->get();
+
+    return view('search', ['results' => $results]);
+}
+
 }

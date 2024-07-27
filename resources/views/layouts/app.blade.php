@@ -60,8 +60,8 @@
                         <a class="nav-link text-white" href="{{url('/contact')}}">Contact</a>
                     </li>
                     </ul>
-                    <form class="d-flex" method="GET" action="search" role="search">
-                        <input class="form-control me-2" name="search"  placeholder="Search" aria-label="Search" required>
+                    <form class="d-flex" action="{{ route('search') }}" method="GET">
+                        <input class="form-control me-2" name="search"  placeholder="Search Products" aria-label="Search" required>
                         <button class="btn btn-outline-danger" type="submit">Search</button>
                       </form>
                 
