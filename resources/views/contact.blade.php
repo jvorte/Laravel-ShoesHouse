@@ -1,23 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-  {{-- breadcrumb section --}}
-<div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">contact</li>
-        </ol>
-      </nav>
-    </div>
-  {{--end breadcrumb section --}}
+
 
     {{-- form section --}}
     <div class="container">
 
-        <h1 class="my-5">Contact</h1>
+               <!-- Heading -->
+               <div class="bg-body-tertiary mb-5">
+                <h1 class="">Contact</h1>
+                <!-- Breadcrumb -->
+                <nav class="d-flex">
+                  <h6 class="mb-0">
+                    <a href="{{ url('/home') }}" class="text-reset">Home</a>
+                    <span>/</span>
+                    <a href="" class="text-reset"><u>Contact</u></a>
+                  </h6>
+                </nav>
+                <!-- Breadcrumb -->
+              </div>
+              <!-- Heading -->
+          
 
-        <form method="POST" class="row g-3 needs-validation" novalidate>
+        <form method="POST" class="row g-3 needs-validation my-5" novalidate>
             @csrf
             <div class="col-md-4">
               <label for="validationCustom01" class="form-label">First name</label>

@@ -5,10 +5,8 @@
     font-family: "Poppins", sans-serif;
 
 }
-#nav-first{
-background-color: #C7362E;
+/* -------------Home front page------------------------- */
 
-}
 #main-app{
     background-color: #C7362E;
 }
@@ -20,39 +18,73 @@ background-color: #C7362E;
 .main-left h1{
 font-size: 90px;
 color: rgb(193, 201, 207);
-font-family: "Manrope", sans-serif;
-
+font-family: "Poppins", sans-serif;
+margin-top: 35%;
+font-weight: 700;
 }
 
 .main-left p{
 font-size: 25px;
  color: rgb(193, 201, 207);
- font-family: "Manrope", sans-serif;
+ font-family: "Poppins", sans-serif;
 }
 
 
 .main-right img{
   margin-top: 20%;
 }
+/* ----------end---Home front page------------------------- */
+
+
 #nav-first{
  background-color: #292929;   
-}
 
-#text-hide{
+}
+/* ---product--card --------------------- */
+
+
+#text-height{
  height:  70px;
 }
 
-/* - footer--------------------------------------------- --*/
+.zoom {
 
-.main-footer{
-    background-color: #C7362E;
-    bottom: 0;
-    color: rgb(190, 197, 204);
-    font-family: "Poppins", sans-serif;
+  transition: transform .2s; /* Animation */
+
 }
-#footer-name a{
-    color: aliceblue;
+
+.zoom:hover {
+  z-index: 1;
+  transform: scale(3.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+/* ------end product card --------------- */
+
+/* --------------shop--cart------------------------------------------------- */
+.dropdown{
+  float:right;
+  padding-right: 30px;
+}
+#dropdown #dropdown-menu{
+  padding:20px;
+  top:30px !important;
+  width:350px !important;
+  left:-200px !important;
+  box-shadow:0px 5px 30px black;
+}
+.dropdown-menu:before{
+  content: " ";
+  position:absolute;
+  top:-20px;
+  right:50px;
+  border:10px solid transparent;
+  border-bottom-color:#fff;
+}
+.fs-8{
+  font-size: 15px;
+}
+
+/* -------------end-shop--cart------------------------------------------------- */
+
 /* ---------footer store------------------------ */
 .footer-clean {
     padding:50px 0;
@@ -66,14 +98,14 @@ font-size: 25px;
     margin-top:0;
     margin-bottom:12px;
     font-weight:bold;
-    font-size:16px;
+    font-size:18px;
   }
   
   .footer-clean ul {
     padding:0;
     list-style:none;
     line-height:1.6;
-    font-size:14px;
+    font-size:16px;
     margin-bottom:0;
   }
   
@@ -138,8 +170,8 @@ font-size: 25px;
   .footer-clean .copyright {
     margin-top:14px;
     margin-bottom:0;
-    font-size:13px;
-    opacity:0.6;
+    font-size:15px;
+    opacity:0.8;
   }
   
 
@@ -162,28 +194,6 @@ font-size: 25px;
 }
 
 
-/* ----------------cart------------------------------------------------- */
-.dropdown{
-    float:right;
-    padding-right: 30px;
-}
-#dropdown #dropdown-menu{
-    padding:20px;
-    top:30px !important;
-    width:350px !important;
-    left:-200px !important;
-    box-shadow:0px 5px 30px black;
-}
-.dropdown-menu:before{
-    content: " ";
-    position:absolute;
-    top:-20px;
-    right:50px;
-    border:10px solid transparent;
-    border-bottom-color:#fff;
-}
-.fs-8{
-    font-size: 15px;
-}
 
-/* -------------end---cart------------------------------------------------- */
+
+/* breadcrumb */

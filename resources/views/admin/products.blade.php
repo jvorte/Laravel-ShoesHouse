@@ -2,7 +2,20 @@
 {{-- @php( $products = App\Models\Product::all() ) --}}
 
 @section('title')
-    Products
+         <!-- Heading -->
+         <div class="bg-body-tertiary my-5">
+          <h1 class="">Products</h1>
+          <!-- Breadcrumb -->
+          <nav class="d-flex">
+            <h6 class="mb-0">
+              <a href="{{ url('/home') }}" class="text-reset">Home</a>
+              <span>/</span>
+                    <a href="" class="text-reset"><u>Products</u></a>
+            </h6>
+          </nav>
+          <!-- Breadcrumb -->
+        </div>
+        <!-- Heading -->
 @endsection
 
 
@@ -20,12 +33,12 @@
     {{--card --}}
     @foreach ($products as $product)
     <div class="card text-center my-3 mx-3 product-card" style="width:  17.6rem;">
-      <img src="\{{$product->image}}" class="card-img-top" style="height: 200px" alt="...">
+      <img src="\{{$product->image}}" class="card-img-top zoom" style="height: 200px" alt="...">
     
 
       <div class="card-body">
         <h5 class="card-title">Brand: {{$product->brandname}}</h5>
-        <p class="card-text">{{$product->description}}</p>
+        <p class="card-text" id="text-height">{{$product->description}}</p>
       </div>
       <ul class="list-group list-group-flush">
      

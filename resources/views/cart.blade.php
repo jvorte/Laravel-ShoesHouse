@@ -4,14 +4,23 @@
 
 <div class="container">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
-          <li class="breadcrumb-item"><a href="{{ url('/store') }}">Store</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Cart</li>
-        </ol>
-      </nav>
-    <h1 class="my-5">Cart</h1>
+            <!-- Heading -->
+            <div class="bg-body-tertiary mb-5">
+                <h1 class="">My Cart</h1>
+                <!-- Breadcrumb -->
+                <nav class="d-flex">
+                  <h6 class="mb-0">
+                    <a href="{{ url('/home') }}" class="text-reset">Home</a>
+                    <span>/</span>
+                    <a href="{{ url('/store') }}" class="text-reset"><u>Store</u></a>
+                    <span>/</span>
+                    <a href="" class="text-reset"><u>Cart</u></a>
+                  </h6>
+                </nav>
+                <!-- Breadcrumb -->
+              </div>
+              <!-- Heading -->
+          
 
     <table id="cart" class="table table-hover table-condensed">
         <thead>

@@ -3,12 +3,21 @@
 @section('content')
 
 <div class="container">
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Store</li>
-    </ol>
-  </nav>
+
+  <!-- Heading -->
+  <div class="bg-body-tertiary mb-5">
+    <h1 class="">Store</h1>
+    <!-- Breadcrumb -->
+    <nav class="d-flex">
+      <h6 class="mb-0">
+        <a href="{{ url('/home') }}" class="text-reset">Home</a>
+        <span>/</span>
+        <a href="" class="text-reset"><u>Store</u></a>
+      </h6>
+    </nav>
+    <!-- Breadcrumb -->
+  </div>
+  <!-- Heading -->
 
   {{-- message added to cart successfully! --}}
   <div class="row mt-3">
@@ -22,6 +31,7 @@
         @yield('content')
     </div>
 </div>
+
   {{-- end message added to cart successfully! --}}
   {{-- second navbar area --}}
   <ul class="nav text-bg-danger justify-content-end">
@@ -46,16 +56,16 @@
 
 
     {{--card --}}
-    <div class="container">
+    <div class="container ">
 
       @foreach ($products as $product)
-      <div class="card text-center my-3 mx-3 product-card" style="width: 15.3rem; height:500px">
-        <img src="\{{$product->image}}" class="card-img-top" style="width: auto; height:170px" alt="...">
+      <div class="card text-center my-3 mx-3 product-card " style="width: 15.3rem; height:500px">
+        <img src="\{{$product->image}}" class="card-img-top zoom" style="width: auto; height:170px" alt="...">
       
   
         <div class="card-body">
           <h5 class="card-title">Brand: {{$product->brandname}}</h5>
-          <p class="card-text" id="text-hide" >{{$product->description}}</p>
+          <p class="card-text" id="text-height" >{{$product->description}}</p>
         </div>
         <ul class="list-group list-group-flush">
        

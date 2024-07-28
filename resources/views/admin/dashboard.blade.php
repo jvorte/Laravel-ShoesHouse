@@ -59,7 +59,21 @@
 
     {{-- center section --}}
 <div class="container ">
-  <h1 class="py-4">General</h1>
+
+            <!-- Heading -->
+            <div class="bg-body-tertiary my-5">
+              <h1 class="">General</h1>
+              <!-- Breadcrumb -->
+              <nav class="d-flex">
+                <h6 class="mb-0">
+                  <a href="{{ url('/home') }}" class="text-reset">Home</a>
+               
+                </h6>
+              </nav>
+              <!-- Breadcrumb -->
+            </div>
+            <!-- Heading -->
+
 <div class="container-fluid center-dashboard">
 
   <div class="container text-center">

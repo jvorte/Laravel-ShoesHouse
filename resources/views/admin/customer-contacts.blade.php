@@ -3,7 +3,20 @@
 
 
 @section('title')
-    Contacts
+         <!-- Heading -->
+         <div class="bg-body-tertiary my-5">
+          <h1 class="">Contacts</h1>
+          <!-- Breadcrumb -->
+          <nav class="d-flex">
+            <h6 class="mb-0">
+              <a href="{{ url('/home') }}" class="text-reset">Home</a>
+              <span>/</span>
+                    <a href="" class="text-reset"><u>Contacts</u></a>
+            </h6>
+          </nav>
+          <!-- Breadcrumb -->
+        </div>
+        <!-- Heading -->
 @endsection
 
 

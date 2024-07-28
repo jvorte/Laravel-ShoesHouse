@@ -21,9 +21,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
     
     {{-- cart --}}
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -146,7 +143,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-5 mx-0">
             @yield('content')
                
         </main>
@@ -160,6 +157,7 @@
 
 
    <div class="footer-clean ">
+    
     <footer>
         <div class="container ">
             <div class="row justify-content-center">
@@ -188,7 +186,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                    <p class="copyright">Company Name © 2018</p>
+                    <p class="copyright">Created by <a href="https://jvorte.github.io/Dimitris_Vortelinas/">D.Vortelinas</a> © 2024</p>
                 </div>
             </div>
         </div>
